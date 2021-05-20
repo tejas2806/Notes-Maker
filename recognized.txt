@@ -1,0 +1,1 @@
+using Disco. using this MQ. dial call level keeps on updating at a certain interval as you can see here if the sensor detects that amount of alcohol in the air the budget gets ring. firebase database. 

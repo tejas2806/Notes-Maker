@@ -171,8 +171,8 @@ def index():
 
             clip.audio.write_audiofile(r"converted.wav")
             silence_based_conversion(path="converted.wav")
-            generate_summary("recognized.txt", 2)
-    return render_template("index.html", transcript=generate_summary("recognized.txt", 2) )
+            transcript = generate_summary("recognized.txt", 2)
+    return render_template("index.html", transcript=transcript )
 
 
 if __name__ == "__main__":
