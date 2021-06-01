@@ -8,19 +8,49 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css')}}"/>
 </link>
 
+<style type="text/css">
+    
+    body
+    {
+      background-image: url("{{ url_for('static', filename='3.png') }}");
+       height: 100vh; 
+       
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+
+   overflow-x: hidden;
+   overflow-y: scroll;
+
+   
+
+
+
+  
+
+
+    }
+
+</style>
+
 </head>
 <body>
-<div id="speechContainer">
-    <h1>Upload a file</h1>
-    <form method="post" enctype="multipart/form-data">
-        <input type="file" name="file">
+<div id="speechContainer" style="position: relative; top: 15rem;"  > 
+    <h1 style="text-align: center;position: relative; left: -1rem; ">Upload a file</h1>
+    <form style="text-align: center; position: relative; left: 2rem;" method="post" enctype="multipart/form-data">
+        <input  type="file" name="file">
         <br>
-        <input type="submit" id="submitButton" value="Transcribe">
+        <input style="position: relative; left: -3rem; top:" type="submit" id="submitButton" value="Transcribe">
     </form>
     {% if transcript != "" %}
-    <div id="speechTranscriptContainer">
-        <h1>Transcript</h1>
-        <p id="speechText">{{transcript}}</p>
+    <div id="speechTranscriptContainer" >
+        <h1 style="text-align: center;" >Transcript</h1>
+        <p style="position: relative; left: 28rem;" id="speechText">{{transcript}}</p>
     </div>
     {% endif %}
 </div>
